@@ -29,7 +29,6 @@ while ($row = $result->fetch_assoc()) {
     <div class="container">
         <div class="row">
             <div class="col-6">
-                <h1><a href='#airports'>Airports</a></h1>
                 <?php foreach (range('A', 'Z') as $letter) : ?>
                     <a href="#a<?php echo $letter; ?>" class="text-white"><?php echo $letter; ?></a>
                 <?php endforeach; ?>
@@ -44,7 +43,6 @@ while ($row = $result->fetch_assoc()) {
                 <?php endforeach; ?>
             </div>
             <div class="col-6">
-                <h1><a href='#fixes'>Fixes</a></h1>
                 <?php foreach (range('A', 'Z') as $letter) : ?>
                     <a href="#f<?php echo $letter; ?>" class="text-white"><?php echo $letter; ?></a>
                 <?php endforeach; ?>
