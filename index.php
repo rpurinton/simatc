@@ -22,13 +22,14 @@ while ($row = $result->fetch_assoc()) {
 
 <head>
     <title>Airports and Fixes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body class="bg-dark text-white">
     <div class="container">
         <div class="row">
-            <div class="col-6">
+            <div class="col-12 col-md-6">
                 <?php foreach (range('A', 'Z') as $letter) : ?>
                     <a href="#a<?php echo $letter; ?>" class="text-white"><?php echo $letter; ?></a>
                 <?php endforeach; ?>
@@ -42,7 +43,7 @@ while ($row = $result->fetch_assoc()) {
                     </div>
                 <?php endforeach; ?>
             </div>
-            <div class="col-6">
+            <div class="col-12 col-md-6">
                 <?php foreach (range('A', 'Z') as $letter) : ?>
                     <a href="#f<?php echo $letter; ?>" class="text-white"><?php echo $letter; ?></a>
                 <?php endforeach; ?>
