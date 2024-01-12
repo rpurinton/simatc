@@ -33,7 +33,7 @@ while ($row = $result->fetch_assoc()) {
                 <?php foreach (range('A', 'Z') as $letter) : ?>
                     <a href="#a<?php echo $letter; ?>" class="text-white"><?php echo $letter; ?></a>
                 <?php endforeach; ?>
-                <h1 id="airports">Airports</h1>
+                <h1 id="airports">Airports and VORs</h1>
                 <?php foreach ($airports as $letter => $airportNames) : ?>
                     <div class="row" id="a<?php echo $letter; ?>">
                         <div class="col-12">
