@@ -33,16 +33,11 @@ while ($row = $resultDest->fetch_assoc()) {
                     <div class="card bg-secondary text-white mb-3">
                         <div class="card-header">Route: <?php echo $route['Route_String']; ?></div>
                         <div class="card-body">
-                            <p class="card-text">Destination: <?php echo $route['Dest']; ?></p>
-                            <p class="card-text">Hours: <?php echo $route['Hours1'] . ', ' . $route['Hours2'] . ', ' . $route['Hours3']; ?></p>
-                            <p class="card-text">Type: <?php echo $route['Type']; ?></p>
-                            <p class="card-text">Area: <?php echo $route['Area']; ?></p>
-                            <p class="card-text">Altitude: <?php echo $route['Altitude']; ?></p>
-                            <p class="card-text">Aircraft: <?php echo $route['Aircraft']; ?></p>
-                            <p class="card-text">Direction: <?php echo $route['Direction']; ?></p>
-                            <p class="card-text">Sequence: <?php echo $route['Seq']; ?></p>
-                            <p class="card-text">Departure Center: <?php echo $route['DCNTR']; ?></p>
-                            <p class="card-text">Arrival Center: <?php echo $route['ACNTR']; ?></p>
+                            <?php foreach ($route as $key => $value) : ?>
+                                <?php if (!empty($value)) : ?>
+                                    <p class="card-text"><?php echo ucfirst($key) . ': ' . $value; ?></p>
+                                <?php endif; ?>
+                            <?php endforeach; ?>
                         </div>
                     </div>
                 <?php endforeach; ?>
@@ -53,16 +48,11 @@ while ($row = $resultDest->fetch_assoc()) {
                     <div class="card bg-secondary text-white mb-3">
                         <div class="card-header">Route: <?php echo $route['Route_String']; ?></div>
                         <div class="card-body">
-                            <p class="card-text">Origin: <?php echo $route['Orig']; ?></p>
-                            <p class="card-text">Hours: <?php echo $route['Hours1'] . ', ' . $route['Hours2'] . ', ' . $route['Hours3']; ?></p>
-                            <p class="card-text">Type: <?php echo $route['Type']; ?></p>
-                            <p class="card-text">Area: <?php echo $route['Area']; ?></p>
-                            <p class="card-text">Altitude: <?php echo $route['Altitude']; ?></p>
-                            <p class="card-text">Aircraft: <?php echo $route['Aircraft']; ?></p>
-                            <p class="card-text">Direction: <?php echo $route['Direction']; ?></p>
-                            <p class="card-text">Sequence: <?php echo $route['Seq']; ?></p>
-                            <p class="card-text">Departure Center: <?php echo $route['DCNTR']; ?></p>
-                            <p class="card-text">Arrival Center: <?php echo $route['ACNTR']; ?></p>
+                            <?php foreach ($route as $key => $value) : ?>
+                                <?php if (!empty($value)) : ?>
+                                    <p class="card-text"><?php echo ucfirst($key) . ': ' . $value; ?></p>
+                                <?php endif; ?>
+                            <?php endforeach; ?>
                         </div>
                     </div>
                 <?php endforeach; ?>
