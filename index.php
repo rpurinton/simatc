@@ -28,43 +28,37 @@ while ($row = $result->fetch_assoc()) {
 <body class="bg-dark text-white">
     <div class="container">
         <div class="row">
-            <div class="col-12">
+            <div class="col-6">
                 <h1><a href='#airports'>Airports</a></h1>
-            </div>
-            <div class="col-12">
                 <?php foreach (range('A', 'Z') as $letter) : ?>
                     <a href="#a<?php echo $letter; ?>" class="text-white"><?php echo $letter; ?></a>
                 <?php endforeach; ?>
+                <h1 id="airports">Airports</h1>
+                <?php foreach ($airports as $letter => $airportNames) : ?>
+                    <div class="row" id="a<?php echo $letter; ?>">
+                        <div class="col-12">
+                            <h2><?php echo $letter; ?></h2>
+                            <p><?php echo implode(' ', $airportNames); ?></p>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-12">
+            <div class="col-6">
                 <h1><a href='#fixes'>Fixes</a></h1>
-            </div>
-            <div class="col-12">
                 <?php foreach (range('A', 'Z') as $letter) : ?>
                     <a href="#f<?php echo $letter; ?>" class="text-white"><?php echo $letter; ?></a>
                 <?php endforeach; ?>
+                <h1 id="fixes">Fixes</h1>
+                <?php foreach ($fixes as $letter => $fixNames) : ?>
+                    <div class="row" id="f<?php echo $letter; ?>">
+                        <div class="col-12">
+                            <h2><?php echo $letter; ?></h2>
+                            <p><?php echo implode(' ', $fixNames); ?></p>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
             </div>
         </div>
-        <h1 id="airports">Airports</h1>
-        <?php foreach ($airports as $letter => $airportNames) : ?>
-            <div class="row" id="a<?php echo $letter; ?>">
-                <div class="col-12">
-                    <h2><?php echo $letter; ?></h2>
-                    <p><?php echo implode(' ', $airportNames); ?></p>
-                </div>
-            </div>
-        <?php endforeach; ?>
-        <h1 id="fixes">Fixes</h1>
-        <?php foreach ($fixes as $letter => $fixNames) : ?>
-            <div class="row" id="f<?php echo $letter; ?>">
-                <div class="col-12">
-                    <h2><?php echo $letter; ?></h2>
-                    <p><?php echo implode(' ', $fixNames); ?></p>
-                </div>
-            </div>
-        <?php endforeach; ?>
     </div>
 </body>
 
