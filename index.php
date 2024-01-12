@@ -38,7 +38,11 @@ while ($row = $result->fetch_assoc()) {
                     <div class="row" id="a<?php echo $letter; ?>">
                         <div class="col-12">
                             <h2><?php echo $letter; ?></h2>
-                            <p><?php echo implode(' ', $airportNames); ?></p>
+                            <p>
+                                <?php foreach ($airportNames as $name) : ?>
+                                    <a href="/view.php?id=<?php echo $name; ?>" class="text-white"><?php echo $name; ?></a>
+                                <?php endforeach; ?>
+                            </p>
                         </div>
                     </div>
                 <?php endforeach; ?>
@@ -52,7 +56,11 @@ while ($row = $result->fetch_assoc()) {
                     <div class="row" id="f<?php echo $letter; ?>">
                         <div class="col-12">
                             <h2><?php echo $letter; ?></h2>
-                            <p><?php echo implode(' ', $fixNames); ?></p>
+                            <p>
+                                <?php foreach ($fixNames as $name) : ?>
+                                    <a href="/view.php?id=<?php echo $name; ?>" class="text-white"><?php echo $name; ?></a>
+                                <?php endforeach; ?>
+                            </p>
                         </div>
                     </div>
                 <?php endforeach; ?>
